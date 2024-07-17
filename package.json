@@ -1,0 +1,26 @@
+{
+  "name": "backend_express",
+  "version": "1.0.0",
+  "description": "express js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DatEdric/demo_website_express_react.git"
+  },
+  "author": "tan dat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DatEdric/demo_website_express_react/issues"
+  },
+  "homepage": "https://github.com/DatEdric/demo_website_express_react#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
