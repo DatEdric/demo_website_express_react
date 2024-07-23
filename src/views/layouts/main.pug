@@ -1,0 +1,13 @@
+//- views/layouts/main.pug
+doctype html
+html
+  head
+    title= title
+    //-link css file
+    link(rel="stylesheet", href="/css/main.css")
+    //- Bao gồm partial header
+    include ../partials/header
+  body
+    block content
+    
+    include ../partials/footer
