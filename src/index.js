@@ -1,25 +1,25 @@
 require('dotenv').config();
 const express = require('express');
 const configViewEngine = require('./config/viewEngine');
-const router = require('./routes/web');
+
+//route init
+const route = require('./routes/index');
+//connect db
+const db = require('./config/db_config');
+db.connectdb();
 
 const app = express();
 const morgan = require('morgan');
 const port = 3000;
 const hostname = process.env.HOST_NAME;
-
+app.use(morgan('combined'));
 
 //config template engine
 configViewEngine(app);
 
 //route declare
-app.use('/', router);
-app.use(morgan('combined'));
+route(app);
 
-// app.get('/api', (req, res) => {
-//   res.send({ message: 'connected with Express sucessfuly!' });
-// });
-
-app.listen(port,hostname, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(port, hostname, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
